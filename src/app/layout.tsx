@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {Itim} from "next/font/google"
-import "./globals.css";
+import "../styles/globals.css";
+import Cursor from "../components/cursor";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={itim.className}>
+        <Cursor />
         {children}
       </body>
     </html>

@@ -5,8 +5,8 @@
   height: 100vh;
   background-color: var(--background);
   background-image: 
-    linear-gradient(to right, rgba(255, 81, 0, 0.15) 1px, transparent 1px), /* Vertical lines */
-    linear-gradient(to bottom, rgba(255, 81, 0, 0.15) 1px, transparent 1px); /* Horizontal lines */
+    linear-gradient(to right, var(--lineColor) 1px, transparent 1px), /* Vertical lines */
+    linear-gradient(to bottom, var(--lineColor) 1px, transparent 1px); /* Horizontal lines */
   background-size: 20px 20px;
 }
 .header{
@@ -29,4 +29,21 @@
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   border-radius: 999px;
+  border: 2px solid var(--orange);
+}
+.imageContainer {
+  width: 30vw;
+  height: 30vw;
+  overflow: hidden;
+  position: relative;
+  border-radius: 50%;
+  left: 50%;
+  top: 10vh;
+  transform: translateX(-50%);
+}
+.image {
+  object-fit: cover;
+  object-position: 0;
+  transform: scale(1.4);
+  transform-origin: center;
 }

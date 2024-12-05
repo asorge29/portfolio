@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "../styles/page.module.css";
 
 export default function Home() {
   return (
@@ -13,6 +13,10 @@ export default function Home() {
           <h2 className={styles.sectionLink}>Education</h2>
           <h2 className={styles.sectionLink}>Contact</h2>
         </div>
+      </div>
+
+      <div className={styles.imageContainer}>
+        <Image src="/andy.jpg" alt="Andy Sorge" fill className={styles.image} />
       </div>
       
     </main>
