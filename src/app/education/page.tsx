@@ -1,4 +1,4 @@
-import styles from "../styles/page.module.css";
+import styles from "@/styles/education.module.css";
 
 export default function Home() {
   return (
