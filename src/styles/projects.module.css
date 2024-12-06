@@ -68,7 +68,4 @@
         text-decoration-color: var(--red);
         cursor: none;
     }
-    .icon:hover {
-        filter: drop-shadow(0 0 2px var(--blue));
-    }
 }

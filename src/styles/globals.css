@@ -3,6 +3,7 @@
   --dots: #000;
   --red: #e00932;
   --blue: #00d0ff;
+  --grey: #A7A2A9
 }
 
 @media (prefers-color-scheme: dark) {

@@ -68,8 +68,8 @@ function Project({title, description, live, source, icons}: {
           src={`/${icon}.svg`}
           alt={icon}
           className={styles.icon}
-          width={64}
-          height={64}
+          width={32}
+          height={32}
         />
       ))}
       {live && <div className={styles.linkWrapper}>
