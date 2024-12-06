@@ -1,11 +1,12 @@
 import styles from "@/styles/projects.module.css";
 import {createClient} from "contentful";
+import Image from "next/image";
 
 interface Project {
   fields: {
     title: string;
     description: string;
-    icons: Icon[];
+    icons: string[];
     liveUrl: string;
     sourceUrl: string;
   },
@@ -14,17 +15,6 @@ interface Project {
   },
   metadata: {
     tags: string[];
-  }
-}
-
-interface Icon {
-  sys: {
-    id: string;
-  },
-  fields: {
-    file: {
-      url: string;
-    }
   }
 }
 
@@ -48,11 +38,11 @@ export default async function Home() {
         {projects && projects.map((project) => (
           <Project
             key={project.sys.id}
-            title={project.fields.title as string}
-            description={project.fields.description as string}
-            icons={project.fields.icons as Icon[]}
-            live={project.fields.liveUrl as string}
-            source={project.fields.sourceUrl as string}
+            title={project.fields.title}
+            description={project.fields.description}
+            icons={project.fields.icons}
+            live={project.fields.liveUrl}
+            source={project.fields.sourceUrl}
           />
         ))}
       </div>
@@ -63,7 +53,7 @@ export default async function Home() {
 function Project({title, description, live, source, icons}: {
   title: string,
   description: string,
-  icons: Icon[],
+  icons: string[],
   live: string,
   source: string
 }) {
@@ -72,12 +62,14 @@ function Project({title, description, live, source, icons}: {
     <div className={styles.project}>
       <h3 className={styles.projectTitle}>&#47;&#47;{title}</h3>
       <p>{description}</p>
-      {icons && icons.map((icon) => (
-        <img
-          key={icon.sys.id}
-          src={icon.fields.file.url}
-          alt={icon.sys.id}
+      {icons && icons.map((icon, index) => (
+        <Image
+          key={index}
+          src={`/${icon}.svg`}
+          alt={icon}
           className={styles.icon}
+          width={64}
+          height={64}
         />
       ))}
       {live && <div className={styles.linkWrapper}>
