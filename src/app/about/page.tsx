@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "@/styles/about.module.css";
 import { createClient } from "contentful";
 
@@ -13,7 +12,7 @@ export default async function About() {
 
   return (
     <main className={styles.main}>
-        <h1 className={styles.title}>{aboutMe.fields.greeting as string}</h1>
+        <h1 className={styles.title}>&#47;&#47;{aboutMe.fields.greeting as string}</h1>
         <p className={styles.about}>{aboutMe.fields.about as string}</p>
     </main>
   )

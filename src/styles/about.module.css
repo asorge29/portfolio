@@ -17,4 +17,5 @@
 .about {
     text-align: center;
     font-size: 36px;
+    max-width: 80%;
 }
