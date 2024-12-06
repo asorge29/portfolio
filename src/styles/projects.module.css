@@ -33,6 +33,11 @@
     position: relative;
     transition: all 0.2s ease-in-out;
     padding: 20px;
+    width: 400px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 .projectLink{
     text-decoration: underline;
@@ -43,20 +48,27 @@
 }
 .linkWrapper {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
 }
 .projectTitle {
     text-decoration: underline;
     text-decoration-color: var(--red);
     text-decoration-thickness: 1px;
     width: 100%;
-    margin-bottom: 10px;
 }
-.icon {
-    height: 64px;
-    width: 64px;
-    transition: all 0.2s ease-in-out;
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+.tag {
+    padding: 0 5px;
+    border: 2px solid var(--red);
+    border-radius: 4px;
+    text-wrap: nowrap;
 }
 
 @media (pointer: fine) {
