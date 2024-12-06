@@ -19,7 +19,7 @@ export default function Cursor() {
 
   })
 
-  const cursorPosition = {transform: `translate(${position.x}px, ${position.y}px)`}
+  const cursorPosition = {transform: `translate(calc(${position.x}px - 50%), calc(${position.y}px - 50%))`}
 
   return (
     <div className={styles.cursor} style={cursorPosition}>

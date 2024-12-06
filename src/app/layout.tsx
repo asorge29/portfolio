@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Chakra_Petch} from "next/font/google"
 import "../styles/globals.css";
 import Cursor from "../components/cursor";
+import Navbar from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={chakraPetch.className}>
         <Cursor />
         {children}
+        <Navbar />
       </body>
     </html>
   );
