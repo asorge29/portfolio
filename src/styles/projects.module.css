@@ -53,6 +53,11 @@
     width: 100%;
     margin-bottom: 10px;
 }
+.icon {
+    color: var(--blue);
+    height: 64px;
+    width: 64px;
+}
 
 @media (pointer: fine) {
     .project:hover {

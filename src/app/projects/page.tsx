@@ -5,13 +5,26 @@ interface Project {
   fields: {
     title: string;
     description: string;
-    link: string;
+    icons: Icon[];
+    liveUrl: string;
+    sourceUrl: string;
   },
   sys: {
     id: string;
   },
   metadata: {
     tags: string[];
+  }
+}
+
+interface Icon {
+  sys: {
+    id: string;
+  },
+  fields: {
+    file: {
+      url: string;
+    }
   }
 }
 
@@ -22,7 +35,7 @@ export default async function Home() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
   })
 
-  const entries = await client.getEntries({ content_type: 'project' })
+  const entries = await client.getEntries({content_type: 'project'})
   console.log(entries)
   const projects = entries.items as unknown as Project[];
 
@@ -37,7 +50,9 @@ export default async function Home() {
             key={project.sys.id}
             title={project.fields.title as string}
             description={project.fields.description as string}
-            link={project.fields.link as string}
+            icons={project.fields.icons as Icon[]}
+            live={project.fields.liveUrl as string}
+            source={project.fields.sourceUrl as string}
           />
         ))}
       </div>
@@ -45,13 +60,36 @@ export default async function Home() {
   )
 }
 
-function Project({ title, description, link }: { title: string, description: string, link: string }) {
+function Project({title, description, live, source, icons}: {
+  title: string,
+  description: string,
+  icons: Icon[],
+  live: string,
+  source: string
+}) {
 
   return (
     <div className={styles.project}>
       <h3 className={styles.projectTitle}>&#47;&#47;{title}</h3>
       <p>{description}</p>
-      <div className={styles.linkWrapper}><a href={link} target="_blank" className={styles.projectLink}>View Project&#8599;</a></div>
+      {icons && icons.map((icon) => (
+        <img
+          key={icon.sys.id}
+          src={icon.fields.file.url}
+          alt={icon.sys.id}
+          className={styles.icon}
+        />
+      ))}
+      {live && <div className={styles.linkWrapper}>
+        <a href={live} target="_blank" className={styles.projectLink}>
+          View Live Project&#8599;
+        </a>
+      </div>}
+      {source && <div className={styles.linkWrapper}>
+        <a href={source} target="_blank" className={styles.projectLink}>
+          View Source Code&#8599;
+        </a>
+      </div>}
     </div>
   )
 }
