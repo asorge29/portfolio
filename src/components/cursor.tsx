@@ -19,10 +19,6 @@ export default function Cursor() {
 
   })
 
-  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-    return
-  }
-
   const cursorPosition = {transform: `translate(calc(${position.x}px - 50%), calc(${position.y}px - 50%))`}
 
   return (
