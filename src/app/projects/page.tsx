@@ -1,6 +1,5 @@
 import styles from "@/styles/projects.module.css";
 import {createClient} from "contentful";
-import Image from "next/image";
 
 interface Project {
   fields: {
