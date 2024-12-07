@@ -2,7 +2,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid var(--blue);
+    border: 2px solid var(--yellow);
     position: fixed;
     top: 0;
     left: 0;
@@ -14,7 +14,7 @@
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background-color: var(--blue);
+    background-color: var(--yellow);
     position: absolute;
     top: 50%;
     left: 50%;
