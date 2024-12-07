@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: row;
     position: fixed;
-    bottom: 8vh;
+    bottom: 6vh;
     left: 50%;
     transform: translateX(-50%);
     border: 3px solid var(--red);
     border-radius: 999px;
+    backdrop-filter: blur(5px);
 }
 .link {
     font-size: 36px;
@@ -19,6 +20,30 @@
 .current{
     filter: drop-shadow(0 0 15px var(--red));
     transition: all 0.2s ease-in-out;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+@media (max-width: 1024px) {
+    .link {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .links {
+        bottom: 0;
+        width: 100%;
+        flex-wrap: wrap;
+        padding: 0 5vw;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 0;
+    }
+    .link {
+        font-size: 24px;
+        padding: 0;
+    }
 }
 
 @media (pointer: fine) {
