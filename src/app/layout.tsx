@@ -3,7 +3,6 @@ import {Chakra_Petch} from "next/font/google"
 import "../styles/globals.css";
 import Cursor from "../components/cursor";
 import Navbar from "@/components/navbar";
-import CutCorners from "@/components/cutCorners";
 
 export const metadata: Metadata = {
   title: "Andy Sorge - Developer",
@@ -24,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={chakraPetch.className}>
-        <CutCorners>
-          {children}
-        </CutCorners>
+        {children}
       </body>
     </html>
   );
