@@ -1,5 +1,5 @@
 :root {
-  --background: #1c1b22;
+  --background: #f2e7c7;
   --dots: #000;
   --red: rgb(224, 9, 50);
   --blue: #00d0ff;
@@ -8,8 +8,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1c1b22;
-    --dots: #000;
+    
   }
 }
 
