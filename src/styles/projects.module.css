@@ -9,14 +9,38 @@
     padding-bottom: 12vh;
 }
 
-.heading {
+.headingWrapper {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 64px;
+    font-size: 96px;
     text-align: center;
+}
+
+.purpleItalic {
+    color: var(--purple);
+    font-style: italic;
+}
+.grey {
+    color: var(--grey);
+}
+.heading {
+    color: var(--yellow);
+    font-size: 96px;
+}
+
+.sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 
 .projects {

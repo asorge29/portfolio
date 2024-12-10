@@ -26,10 +26,14 @@ export default async function Projects() {
   const entries = await client.getEntries({content_type: 'project'});
   const projects = entries.items as unknown as Project[];
 
+  console.log(entries);
+
   return (
     <main className={styles.main}>
-      <div className={styles.heading}>
-        <h1>{"//My Projects"}</h1>
+      <div className={styles.headingWrapper}>
+        <span className={`${styles.purpleItalic}`} aria-hidden>const&#160;</span><span className={styles.grey} aria-hidden>projects:</span>
+        <h1 className={styles.heading}>Project<span className={styles.sr}>s</span></h1>
+        <span className={styles.grey} aria-hidden>[] = [];</span>
       </div>
       <div className={styles.projects}>
         {projects && projects.map((project) => (

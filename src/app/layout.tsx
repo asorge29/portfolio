@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={chakraPetch.className}>
+      <body className={chakraPetch.className} style={{fontFamily: "Jetbrains Mono"}}>
         <Cursor />
         {children}
         <Navbar />

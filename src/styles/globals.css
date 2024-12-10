@@ -3,7 +3,9 @@
   --dots: #000;
   --red: rgb(224, 9, 50);
   --yellow: #c9ad00;
-  --grey: #A7A2A9
+  --grey: #A7A2A9;
+  --darkGrey: #444;
+  --purple: #b026da;
 }
 
 @media (prefers-color-scheme: dark) {
