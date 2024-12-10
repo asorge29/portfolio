@@ -23,9 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={chakraPetch.className}>
-        <Cursor />
         {children}
-        <Navbar />
       </body>
     </html>
   );
