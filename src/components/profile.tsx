@@ -3,6 +3,7 @@ import Image from "next/image";
 import {SiGithub, SiGmail, SiLinkedin} from "react-icons/si"
 import {Menu} from 'lucide-react'
 import {createClient} from "contentful";
+import NavMenu from "./navMenu";
 
 interface Profile {
   fields: {
@@ -27,15 +28,15 @@ const Profile = async () => {
 
   const profile = await client.getEntry("4KeAmvdrlpJTTjrM6j9Ifo") as unknown as Profile;
 
-  console.log(profile)
-
   return (
     <div className={styles.container}>
       <div className={styles.navbar}>
+        <NavMenu />
         <Menu className={styles.menuIcon}/>
         <div className={styles.links}>
           <a href="https://github.com/asorge29" className={styles.iconLink}>
             <SiGithub className={styles.icon}/>
+            <div className={styles.tooltip}>Github</div>
           </a>
           <a href="https://linkedin.com/in/andy-sorge-1531ba303" className={styles.iconLink}>
             <SiLinkedin className={styles.icon}/>

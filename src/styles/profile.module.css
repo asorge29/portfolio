@@ -32,6 +32,7 @@
 .iconLink {
     width: 50%;
     height: auto;
+    position: relative;
 }
 .icon {
     width: 100%;
@@ -89,4 +90,15 @@
     border: 2px solid;
     border-radius: 10px;
     font-size: 16px;
+}
+.tooltip {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 0;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+.iconLink:hover > .tooltip {
+    width: auto;
 }
