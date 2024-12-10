@@ -1,5 +1,6 @@
 :root {
-  --background: #150d21;
+  --background: #ece6ff;
+  --profile : #f5f5f5;
   --dots: #000;
   --red: rgb(224, 9, 50);
   --yellow: #c9ad00;
@@ -8,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    
+    --background: #150d21;
   }
 }
 
@@ -24,6 +25,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
 * {

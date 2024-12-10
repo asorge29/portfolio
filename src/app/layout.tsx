@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import {Chakra_Petch} from "next/font/google"
+import {Roboto} from "next/font/google"
 import "../styles/globals.css";
-import Cursor from "../components/cursor";
-import Navbar from "@/components/navbar";
+import Profile from "@/components/profile";
 
 export const metadata: Metadata = {
   title: "Andy Sorge - Developer",
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
 
 };
 
-const chakraPetch = Chakra_Petch({
+const roboto = Roboto({
   weight: "400",
   subsets: ["latin"]
 });
@@ -22,7 +21,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={chakraPetch.className}>
+      <body className={roboto.className}>
+        <Profile />
         {children}
       </body>
     </html>

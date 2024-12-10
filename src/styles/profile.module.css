@@ -1,0 +1,92 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: var(--background);
+    width: 50%;
+}
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 10%;
+    height: 100%;
+    color: white;
+}
+.menuIcon {
+    width: 50%;
+    height: auto;
+    margin: 20px 0;
+}
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.iconLink {
+    width: 50%;
+    height: auto;
+}
+.icon {
+    width: 100%;
+    height: auto;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+.imageBorder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(30vw + 8px);
+    height: calc(30vw + 8px);
+    border-radius: 50%;
+    background-image: conic-gradient(
+            #ff0000 0%,
+            #ff9a00 10%,
+            #d0de21 20%,
+            #4fdc4a 30%,
+            #3fdad8 40%,
+            #2fc9e2 50%,
+            #1c7fee 60%,
+            #5f15f2 70%,
+            #ba0cf8 80%,
+            #fb07d9 90%,
+            #ff0000 100%
+    );
+}
+.imageContainer {
+    width: 30vw;
+    height: 30vw;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+}
+.image {
+    object-fit: cover;
+    transform-origin: center;
+}
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.tag {
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 16px;
+}
