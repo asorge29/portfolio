@@ -1,7 +1,6 @@
 import styles from "@/styles/profile.module.css";
 import Image from "next/image";
 import {SiGithub, SiGmail, SiLinkedin} from "react-icons/si"
-import {Menu} from 'lucide-react'
 import {createClient} from "contentful";
 import NavMenu from "./navMenu";
 
@@ -30,19 +29,20 @@ const Profile = async () => {
 
   return (
     <div className={styles.container}>
-      <div className={styles.navbar}>
+      <div className={styles.sidebar}>
         <NavMenu />
-        <Menu className={styles.menuIcon}/>
         <div className={styles.links}>
           <a href="https://github.com/asorge29" className={styles.iconLink}>
             <SiGithub className={styles.icon}/>
-            <div className={styles.tooltip}>Github</div>
+            <div className={styles.tooltip}>Github - @asorge29</div>
           </a>
           <a href="https://linkedin.com/in/andy-sorge-1531ba303" className={styles.iconLink}>
             <SiLinkedin className={styles.icon}/>
+            <div className={styles.tooltip}>LinkedIn</div>
           </a>
           <a href="mailto:hi@asorge29.dev" className={styles.iconLink}>
             <SiGmail className={styles.icon}/>
+            <div className={styles.tooltip}>Email - hi@asorge29.dev</div>
           </a>
         </div>
       </div>
@@ -52,13 +52,14 @@ const Profile = async () => {
             <Image src="/andy.jpg" alt="Profile Picture" fill className={styles.image}/>
           </div>
         </div>
-        <h1>Andy Sorge</h1>
-        <h2>{profile.fields.title}</h2>
+        <h1 className={styles.name}>Andy Sorge</h1>
+        <h2 className={styles.title}>{profile.fields.title}</h2>
         <div className={styles.tags}>
           {profile.fields.tags.map((tag, index) => (
             <div key={index} className={styles.tag}>{tag}</div>
           ))}
         </div>
+        <p className={styles.greeting}>{profile.fields.greeting}</p>
       </div>
     </div>
   )
