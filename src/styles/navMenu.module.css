@@ -30,7 +30,7 @@
         display: block;
         width: 0;
         height: 2px;
-        background-color: var(--red);
+        background-color: white;
         position: absolute;
         left: 0;
         bottom: 9px;
@@ -41,8 +41,10 @@
     .menuIcon:hover {
         cursor: pointer;
     }
-}
-
-.pageLink:hover::before {
-    width: 100%;
+    .pageLink:hover::before {
+        width: 100%;
+    }
+    .pageLink:hover {
+        color: white;
+    }
 }
