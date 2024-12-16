@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import {Itim} from "next/font/google"
+import {Bodoni_Moda} from "next/font/google"
 import "../styles/globals.css";
-import Profile from "@/components/profile";
+import Cursor from "@/components/cursor";
+import {isMobile} from 'react-device-detect';
 
 export const metadata: Metadata = {
   title: "Andy Sorge - Developer",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 };
 
-const itim = Itim({
+const BodoniModa = Bodoni_Moda({
   weight: "400",
   subsets: ["latin"]
 });
@@ -21,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={itim.className}>
-        <Profile />
+      <body className={BodoniModa.className}>
         {children}
+        {!isMobile && <Cursor/>}
       </body>
     </html>
   );

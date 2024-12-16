@@ -1,12 +1,6 @@
 :root {
-  --background: #1c1b22;
-  --dots: #000;
-  --red: rgb(224, 9, 50);
-  --yellow: #c9ad00;
-}
-
-@media (prefers-color-scheme: dark) {
-
+  --background: #fff;
+  --text: #000;
 }
 
 html,
@@ -16,19 +10,12 @@ body {
 }
 
 body {
-  color: var(--red);
+  color: var(--text);
   background-color: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  background-image: radial-gradient(circle, var(--dots) 2px, transparent 2px),
-    radial-gradient(circle, var(--dots) 2px, transparent 2px);
-  background-size: 50px 50px, 50px 50px;
-  background-position: 0 0, 25px 25px;
-  flex-direction: row;
 }
 * {
   box-sizing: border-box;
@@ -42,6 +29,10 @@ a {
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --text: #fff;
+  }
   html {
     color-scheme: dark;
   }
