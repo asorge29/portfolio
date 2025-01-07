@@ -28,6 +28,16 @@ a {
   text-decoration: none;
 }
 
+#cursor {
+  display: none;
+}
+
+@media (pointer: fine) {
+  body:hover #cursor {
+    display: block;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #000;

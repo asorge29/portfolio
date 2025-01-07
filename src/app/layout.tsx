@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import {Bodoni_Moda} from "next/font/google"
 import "../styles/globals.css";
 import Cursor from "@/components/cursor";
-import {isMobile} from 'react-device-detect';
 
 export const metadata: Metadata = {
   title: "Andy Sorge - Developer",
@@ -24,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={BodoniModa.className}>
         {children}
-        {!isMobile && <Cursor/>}
+        <Cursor/>
       </body>
     </html>
   );
