@@ -12,6 +12,11 @@
 .title {
     text-align: center;
 }
+.sections {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
 .link {
     display: flex;
     flex-direction: row;
@@ -20,6 +25,15 @@
     text-decoration: underline 2px transparent;
     transition: all 0.2s ease-in-out;
 }
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sectionTitle {
+    text-decoration: underline 2px var(--text);
+}
+
 @media (pointer: fine) {
     .link:hover {
         text-decoration: underline 2px var(--text);
