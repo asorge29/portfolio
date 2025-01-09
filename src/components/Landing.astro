@@ -1,3 +1,7 @@
+---
+import {Icon} from 'astro-icon/components'
+---
+
 <main class="main">
   <h1 class="title">Andy Sorge - Developer</h1>
   <div class="section">
@@ -14,16 +18,22 @@
   <div class="section">
     <h2 class="sectionTitle">Contact</h2>
     <a href="https://github.com/asorge29" target="_blank" class="link">
-      <img src="/github.svg" class="icon" />
-      <div class="tooltip">Github - @asorge29&#8599;</div>
+      <div class="icon-wrapper">
+        <Icon name="simple-icons:github">
+      </div>
+      <div>Github - @asorge29&#8599;</div>
     </a>
     <a href="https://linkedin.com/in/asorge29" target="_blank" class="link">
-      <img src="/linkedin.svg" class="icon" />
-      <div class="tooltip">LinkedIn&#8599;</div>
+      <div class="icon-wrapper">
+        <Icon name="simple-icons:linkedin">
+      </div>
+      <div>LinkedIn&#8599;</div>
     </a>
     <a href="mailto:hi@asorge29.dev" target="_blank" class="link">
-      <img src="/gmail.svg" class="icon" />
-      <div class="tooltip">Email - hi@asorge29.dev&#8599;</div>
+      <div class="icon-wrapper">
+        <Icon name="simple-icons:gmail">
+      </div>
+      <div>Email - hi@asorge29.dev&#8599;</div>
     </a>
   </div>
 </main>
@@ -71,8 +81,9 @@
   .sectionTitle {
     text-decoration: underline 2px var(--text);
   }
-  .icon {
-    height: 1em;
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
   }
 
   @media (pointer: fine) {

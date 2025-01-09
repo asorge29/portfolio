@@ -9,6 +9,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.4"
+    "@fontsource/bodoni-moda": "^5.1.1",
+    "astro": "^5.1.4",
+    "astro-icon": "^1.1.5"
+  },
+  "devDependencies": {
+    "@iconify-json/simple-icons": "^1.2.19"
   }
 }
