@@ -1,10 +1,23 @@
 ---
-import '@fontsource/bodoni-moda'
+import { AstroFont } from "astro-font";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
+      <AstroFont
+        config={[
+          {
+            src: [],
+            name: "Bodoni Moda",
+            googleFontsURL: 'https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;1,400;1,700&display=swap',
+            preload: true,
+            display: "swap",
+            selector: "body",
+            fallback: "serif",
+          },
+        ]}
+      />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
@@ -44,15 +57,11 @@ import '@fontsource/bodoni-moda'
     font-weight: 400;
     font-style: normal;
   }
+  
   * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
   }
 
   #cursor {

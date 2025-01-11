@@ -18,21 +18,15 @@ import {Icon} from 'astro-icon/components'
   <div class="section">
     <h2 class="sectionTitle">Contact</h2>
     <a href="https://github.com/asorge29" target="_blank" class="link">
-      <div class="icon-wrapper">
-        <Icon name="simple-icons:github">
-      </div>
+        <Icon name="simple-icons:github"/>
       <div>Github - @asorge29&#8599;</div>
     </a>
     <a href="https://linkedin.com/in/asorge29" target="_blank" class="link">
-      <div class="icon-wrapper">
-        <Icon name="simple-icons:linkedin">
-      </div>
+        <Icon name="simple-icons:linkedin"/>
       <div>LinkedIn&#8599;</div>
     </a>
     <a href="mailto:hi@asorge29.dev" target="_blank" class="link">
-      <div class="icon-wrapper">
-        <Icon name="simple-icons:gmail">
-      </div>
+        <Icon name="simple-icons:gmail"/>
       <div>Email - hi@asorge29.dev&#8599;</div>
     </a>
   </div>
@@ -53,7 +47,6 @@ import {Icon} from 'astro-icon/components'
     margin: 0;
     height: 100vh;
     font-size: x-large;
-    user-select: none;
     gap: 1vh;
   }
   .title {
@@ -81,9 +74,10 @@ import {Icon} from 'astro-icon/components'
   .sectionTitle {
     text-decoration: underline 2px var(--text);
   }
-  .icon-wrapper {
-    display: flex;
-    align-items: center;
+  
+  *::selection {
+      color: var(--background);
+      background-color: var(--text);
   }
 
   @media (pointer: fine) {
