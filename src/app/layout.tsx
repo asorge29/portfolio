@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const BodoniModa = Bodoni_Moda({
-  weight: "400",
+  weight: ["400", "700"],
   subsets: ["latin"]
 });
 
