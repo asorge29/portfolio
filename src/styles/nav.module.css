@@ -1,0 +1,17 @@
+.nav {
+    position: fixed;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+    gap: 4ch;
+}
+.link {
+    text-decoration: underline 2px transparent;
+    transition: all 0.2s ease-in-out;
+}
+.link:hover {
+    text-decoration: underline 2px var(--text);
+}

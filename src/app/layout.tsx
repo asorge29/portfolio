@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {Bodoni_Moda} from "next/font/google"
 import "../styles/globals.css";
 import Cursor from "@/components/cursor";
+import Nav from "@/components/nav";
 
 export const metadata: Metadata = {
   title: "Andy Sorge - Developer",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={BodoniModa.className}>
         {children}
         <Cursor/>
+        <Nav/>
       </body>
     </html>
   );
