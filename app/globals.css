@@ -20,3 +20,7 @@ body {
     background: #839788;
     color: #163024;
 }
+
+a {
+    text-decoration: underline dotted;
+}
